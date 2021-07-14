@@ -1,3 +1,7 @@
+/*---------------------------------------*/
+/* BASIC SETUP */
+/*---------------------------------------*/
+
 * {
     margin: 0;
     padding: 0;
@@ -14,20 +18,16 @@ html {
 
 }
 
-header {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705)), url(img/hero.jpg) ;
-    background-size: cover;
-    background-position: center;
-    height: 100vh; 
+/*---------------------------------------*/
+/* Reusable components */
+/*---------------------------------------*/
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
 }
 
-.hero-text-box {
-    position: absolute;
-    width: 1140px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+/*------------HEADING--------------*/
 
 h1 {
     margin: 0;
@@ -38,6 +38,8 @@ h1 {
     letter-spacing: 1px;
     word-spacing: 4px;
 }
+
+/*------------BUTTONS-------------*/
 
 .btn:link,
 .btn:visited {
@@ -82,4 +84,58 @@ h1 {
 .btn-ghost:active{
     color: #ffffff;
     border: 1px solid #81420b;
+}
+
+/*---------------------------------------*/
+/* HEADER */
+/*---------------------------------------*/
+
+header {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705)), url(img/hero.jpg) ;
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 10px;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li{
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    color:#fff;
+    font-size: 90%;
+    padding-bottom: 3px;
+    border-bottom:2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom:2px solid #e67e22;
 }
